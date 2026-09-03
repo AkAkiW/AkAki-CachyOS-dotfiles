@@ -1,0 +1,27 @@
+# Secrets / private data
+*.key
+*.pem
+*.p12
+*.pfx
+*.secret
+*.token
+*.credentials
+
+# SSH
+.ssh/
+**/.ssh/
+
+# Browser/session data
+mozilla/
+YandexMusic/
+zen/
+
+# Runtime / cache
+.cache/
+.cache/**
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
