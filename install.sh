@@ -111,6 +111,7 @@ MAPPINGS=(
   "qt5ct|qt5ct|dir"
   "qt6ct|qt6ct|dir"
   "xsettingsd|xsettingsd|dir"
+  "fastfetch|fastfetch|dir"
   "kdeglobals|kdeglobals|file"
 )
 
