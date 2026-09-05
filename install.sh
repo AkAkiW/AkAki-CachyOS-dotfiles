@@ -285,6 +285,14 @@ CURRENT_UID="$(id -u)"
 CURRENT_GID="$(id -g)"
 
 mkdir -p "$CONFIG_DIR"
+
+# The parent "~/.config-backups" directory is allowed (and expected) to
+# already exist across runs, so this uses -p. This is safe and does not
+# weaken the guarantee below: -p only creates missing parent components,
+# it does not touch BACKUP_DIR itself if BACKUP_DIR already existed, and
+# in that case the plain "mkdir" right after would still fail.
+mkdir -p "$TARGET_HOME/.config-backups"
+
 # Deliberately NOT mkdir -p here: BACKUP_DIR must be a brand-new,
 # uniquely-timestamped directory for this run. If it already exists
 # (which should be effectively impossible given the nanosecond-precision
